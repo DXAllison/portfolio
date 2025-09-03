@@ -37,7 +37,7 @@
             </div>
         </nav>
 
-        <section id="hero">
+        <section id="hero" class="reveal-left">
             <div class="intro__img-container">
                 <img src="./images/placeholder.png" alt="A photo of D'Marcus, the site owner" class="profile-img">
             </div>
@@ -55,26 +55,26 @@
         </section>
 
         <section id="about">
-            <h2>About Me</h2>
+            <h2 class="reveal-left">About Me</h2>
             <div class="about__container">
-                <div class="about_info">
+                <div class="about_info reveal-left">
                     <p>Hello, I'm D'Marcus, an up-and-coming junior web developer. I consider myself a dedicated,
                         results-driven
                         professional, and I'm constantly seeking out new coding techniques to elevate my craft. I
-                        believe we should all strive to be our greatest selves, and I also want to express that in my
+                        believe in striving for my greatest self, and I want to express that in my
                         work. Check out my skills and experience below, and if you want to know a bit more about
-                        the fun stuff, you can check that out <a href="">here</a>!</p>
+                        the fun stuff, you can check that out <a href="" class="about-link">here</a>!</p>
                 </div>
 
-                <div class="about_img"><img src="./images/placeholder.png"
+                <div class="about_img reveal-right"><img src="./images/placeholder.png"
                         alt="Another photo of D'Marcus, the site owner" class="secondary-img">
                 </div>
             </div>
 
-            <article id="about__tabs">
+            <article id="about__tabs" class="reveal">
                 <div class="tabs_container">
                     <button class="tab-btn active-btn" type="button" data-id="tabSkills">Skills</button>
-                    <button class="tab-btn" type="button" data-id="tabExperience">Experiences</button>
+                    <button class="tab-btn" type="button" data-id="tabExperience">Experience</button>
                     <button class="tab-btn" type="button" data-id="tabGoals">Goals</button>
                 </div>
                 <!--  -->
@@ -123,9 +123,9 @@
         </section>
 
         <section id="projects">
-            <h2>My Projects</h2>
+            <h2 class="reveal-right">My Projects</h2>
 
-            <div id="project_carousel">
+            <div id="project_carousel" class="reveal-right">
                 <button type="button" class="arrow-btn prev">
                     <span class="material-symbols-outlined">
                         arrow_back_ios
@@ -135,7 +135,7 @@
                 <div class="track" id="projectsTrack" tabindex="0">
                     <!-- Card 1 -->
                     <article class="card">
-                        <img src="./images/placeholder.png" alt="">
+                        <img src="./images/Screenshot 2025-09-02 110759.png" alt="">
                         <div class="project-content">
                             <h3>Camie's Photos</h3>
                             <p>A real description of the app or website</p>
@@ -152,7 +152,7 @@
                     </article>
                     <!-- Card 2 -->
                     <article class="card">
-                        <img src="./images/placeholder.png" alt="">
+                        <img src="./images/Screenshot 2025-09-02 111047.png" alt="">
                         <div class="project-content">
                             <h3>GotMoxie Designs</h3>
                             <p>A real description of the app or website</p>
@@ -169,7 +169,7 @@
                     </article>
                     <!-- Card 3 -->
                     <article class="card">
-                        <img src="./images/placeholder.png" alt="">
+                        <img src="./images/Screenshot 2025-09-02 111542.png" alt="">
                         <div class="project-content">
                             <h3>Forkify</h3>
                             <p>A real description of the app or website</p>
@@ -188,7 +188,7 @@
                     </article>
                     <!-- Card 4 -->
                     <article class="card">
-                        <img src="./images/placeholder.png" alt="">
+                        <img src="./images/Screenshot 2025-09-02 111825.png" alt="">
                         <div class="project-content">
                             <h3>Timer App</h3>
                             <p>A real description of the app or website</p>
@@ -215,12 +215,12 @@
         </section>
 
         <section id="contact">
-            <h2>Contact Me</h2>
+            <h2 class="reveal-left">Contact Me</h2>
 
-            <p>Friends, business owners, and potential collaborators, please reach out to me and let's see if I can help
+            <p class="reveal-left">Friends, business owners, and potential collaborators, please reach out to me and let's see if I can help
                 your websites come to life.</p>
 
-            <div class="form__container">
+            <div class="form__container reveal">
                 <form action="" class="contact_form">
                     <input type="text" name="" id="name" placeholder="Full Name"> <br>
                     <input type="email" name="" id="email" placeholder="Email"> <br>
@@ -234,37 +234,11 @@
 
         <footer>
             <p>
-                2025 @ D'Marcus allison
+                2025 @ D'Marcus allison.
             </p>
-            <p>Website designed and built by me</p>
-            <p>All rights reserved</p>
+            <p>Website designed and built by me. All rights reserved</p>
         </footer>
 
-        <!--
-            <section id="contact">
-        <h2>Let's Talk Business</h2>
-        <form action="/contact" method="POST" class="contact-form">
-            --Name Field
-            <label for="name">Full Name</label>
-            <input type="text" id="name" name="name" placeholder="Your name" required>
-
-            --Email Field
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" placeholder="your@email.com" required>
-
-            --Subject Field
-            <label for="subject">Subject</label>
-            <input type="text" id="subject" name="subject" placeholder="What's this about?" required>
-
-            --Message Field
-            <label for="message">Your Message</label>
-            <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
-
-            --Submit Button
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
--->
         <article class="light_dark--toggle">
             <img src="./images/moon-solid.svg" alt="moon icon: click for night mode" class="light-dark moon ">
             <img src="./images/sun-solid.svg" alt="sun icon: click for light mode" class="light-dark sun inactive">
@@ -272,3 +246,28 @@
     </body>
 
 </html>
+            <!--
+                <section id="contact">
+            <h2>Let's Talk Business</h2>
+            <form action="/contact" method="POST" class="contact-form">
+                --Name Field
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required>
+    
+                --Email Field
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="your@email.com" required>
+    
+                --Subject Field
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" placeholder="What's this about?" required>
+    
+                --Message Field
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+    
+                --Submit Button
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    -->
