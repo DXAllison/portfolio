@@ -144,6 +144,47 @@ footer {
   color: var(--clr-white);
 }
 
+
+/* Dark Mode Extras */
+body.dark-mode .about_content {
+    background-color: #585555;
+}
+
+body.dark-mode .tab-btn {
+  background-color: rgb(66, 66, 66);
+  color: white;
+}
+
+body.dark-mode .tab-btn.active-btn {
+  background-color: rgb(39, 39, 39);
+
+}
+
+body.dark-mode .card {
+  background-color: rgb(39, 39, 39);
+  color: rgb(226, 226, 226);
+}
+
+body.dark-mode .card p {
+    color: white;
+}
+
+body.dark-mode .form__container {
+    background-color: rgb(39, 39, 39);
+}
+
+body.dark-mode .form__container #name,
+body.dark-mode .form__container #email,
+body.dark-mode .form__container #subject,
+body.dark-mode .form__container #message {
+  background-color: rgb(201, 201, 201);
+}
+
+body.dark-mode .submit {
+  background-color: #1b2631;
+  color: white;
+}
+
 @media screen and (min-width: 749px) {
 
   .reveal,
@@ -739,7 +780,7 @@ PROJECTS SECTION
 
 .btn-link.github {
   background-color: #62b3c7;
-  color: var(--clr-black);
+  color: var(--clr-white);
 }
 
 .btn-link.live {
@@ -882,6 +923,18 @@ CONTACT SECTION
 
 }
 
+@media (max-width: 520px) {
+  #contact h2,
+  #contact p {
+    text-align: center;
+    margin-left: 0;
+  }
+
+    #contact p{
+      padding: 20px;
+    }
+}
+
 /* =============== 
 FOOTER SECTION
 ===============*/
@@ -894,45 +947,4 @@ footer {
   gap: 15px;
   justify-content: center;
   align-items: center;
-}
-
-/*  */
-
-body.dark-mode .about_content {
-    background-color: #585555;
-}
-
-body.dark-mode .tab-btn {
-  background-color: rgb(66, 66, 66);
-  color: white;
-}
-
-body.dark-mode .tab-btn.active-btn {
-  background-color: rgb(39, 39, 39);
-
-}
-
-body.dark-mode .card {
-  background-color: rgb(39, 39, 39);
-  color: rgb(226, 226, 226);
-}
-
-body.dark-mode .card p {
-    color: white;
-}
-
-body.dark-mode .form__container {
-    background-color: rgb(39, 39, 39);
-}
-
-body.dark-mode .form__container #name,
-body.dark-mode .form__container #email,
-body.dark-mode .form__container #subject,
-body.dark-mode .form__container #message {
-  background-color: rgb(201, 201, 201);
-}
-
-body.dark-mode .submit {
-  background-color: #1b2631;
-  color: white;
 }
