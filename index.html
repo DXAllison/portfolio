@@ -4,9 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>D'Marcus A.</title>
+    <title>D'Marcus Allison's Portfolio</title>
 
-    <!-- Google Fonts/Symbols -->
+    <!-- EmailJS -->
+     <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "JLMQDlVqST896QB6b",
+      });
+   })();
+</script>
+
+    <!-- Google Fonts (Symbols) -->
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_back_ios,arrow_forward_ios" />
 
@@ -15,259 +27,250 @@
 </head>
 
 <body>
+    <nav id="navbar">
+        <div class="nav__container" aria-label="Main navigation">
+            <a href="#" class="nav-logo" aria-label="Logo element">DXA</a>
+            <div class="nav_menu-toggle" aria-label="Hamburger Menu elements">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <div class="nav_list--container">
+                <ul class="nav_list--items">
+                    <li class="title-menu">MENU</li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#about__tabs">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-    <body>
-        <nav id="navbar">
-            <div class="nav__container" aria-label="Main navigation">
-                <a href="#" class="nav-logo" aria-label="Logo element">DXA</a>
-                <div class="nav_menu-toggle" aria-label="Hamburger Menu elements">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-                <div class="nav_list--container">
-                    <ul class="nav_list--items">
-                        <li class="title-menu">MENU</li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#about__tabs">Experience</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#contact">Contact</a></li>
+    <section id="hero" class="reveal-left">
+        <div class="intro__img-container">
+            <img src="./images/photograph.jpg" alt="A photo of D'Marcus, the site creator and owner"
+                class="profile-img">
+        </div>
+
+        <div class="intro__container">
+            <h1 class="intro-heading">D'Marcus Allison</h1>
+            <hr>
+            <p>An Aspiring <span class="intro-span">Web Developer</span></p>
+
+            <div class="portfolio_btns">
+                <button type="button" class="hero-btn">Download CV</button>
+                <button type="button" class="hero-btn">Contact Me</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2 class="reveal-left">About Me</h2>
+        <div class="about__container">
+            <div class="about_info reveal-left">
+                <p>Hello, I'm D'Marcus, an up-and-coming junior web developer. I consider myself a dedicated and
+                    results-driven professional who's eagerly seeking out new coding techniques to elevate my craft.
+                    Feel free to take a quick look at my skills and experience below.
+                    <!-- If you want to know a bit more about the personal stuff, you can check that out <a href="" class="about-link">here</a>! -->
+                </p>
+
+                <!-- <div class="about_modal">
+                <p>To be Continued...(WIP)</p>
+            </div> -->
+            </div>
+
+            <div class="about_img reveal-right"><img src="./images/photograph2.png"
+                    alt="Another photo of D'Marcus, the site creator and owner" class="secondary-img">
+            </div>
+        </div>
+
+        <article id="about__tabs" class="reveal">
+            <div class="tabs_container">
+                <button class="tab-btn active-btn" type="button" data-id="tabSkills">Skills</button>
+                <button class="tab-btn" type="button" data-id="tabExperience">Experience</button>
+                <button class="tab-btn" type="button" data-id="tabGoals">Goals</button>
+            </div>
+            <!--  -->
+            <article class="about_content">
+                <div class="content active-content" id="tabSkills">
+                    <h4 class="tab-heading">My Tech Stack</h4>
+                    <ul class="skills--list">
+                        <li><img src="./images/icons/HTML5_SVG.svg" alt="" class="skill-icon"></li>
+                        <li><img src="./images/icons/CSS3_SVG.svg" alt="" class="skill-icon"></li>
+                        <li><img src="./images/icons/Javascript_SVG.svg" alt="" class="skill-icon"></li>
+                        <li><img src="./images/icons/Bootstrap_SVG.svg" alt="" class="skill-icon"></li>
+                        <li><img src="./images/icons/nodejs_SVG.svg" alt="" class="skill-icon"></li>
+                        <li><img src="./images/icons/ReactJS_SVG.svg" alt="" class="skill-icon"></li>
+                        <li><img src="./images/icons/WordPress_SVG.svg" alt="" class="skill-icon"></li>
                     </ul>
                 </div>
-            </div>
-        </nav>
-
-        <section id="hero" class="reveal-left">
-            <div class="intro__img-container">
-                <img src="./images/placeholder.png" alt="A photo of D'Marcus, the site owner" class="profile-img">
-            </div>
-
-            <div class="intro__container">
-                <h1 class="intro-heading">D'Marcus Allison</h1>
-                <hr>
-                <p>An Aspiring <span class="intro-span">Web Developer</span></p>
-
-                <div class="portfolio_btns">
-                    <button type="button" class="hero-btn">Download CV</button>
-                    <button type="button" class="hero-btn">Contact Me</button>
-                </div>
-            </div>
-        </section>
-
-        <section id="about">
-            <h2 class="reveal-left">About Me</h2>
-            <div class="about__container">
-                <div class="about_info reveal-left">
-                    <p>Hello, I'm D'Marcus, an up-and-coming junior web developer. I consider myself a dedicated,
-                        results-driven
-                        professional, and I'm constantly seeking out new coding techniques to elevate my craft. I
-                        believe in striving for my greatest self, and I want to express that in my
-                        work. Check out my skills and experience below, and if you want to know a bit more about
-                        the fun stuff, you can check that out <a href="" class="about-link">here</a>!</p>
-                </div>
-
-                <div class="about_img reveal-right"><img src="./images/placeholder.png"
-                        alt="Another photo of D'Marcus, the site owner" class="secondary-img">
-                </div>
-            </div>
-
-            <article id="about__tabs" class="reveal">
-                <div class="tabs_container">
-                    <button class="tab-btn active-btn" type="button" data-id="tabSkills">Skills</button>
-                    <button class="tab-btn" type="button" data-id="tabExperience">Experience</button>
-                    <button class="tab-btn" type="button" data-id="tabGoals">Goals</button>
+                <!--  -->
+                <div class="content" id="tabExperience">
+                    <h4 class="tab-heading">Experience</h4>
+                    <p>My skills regarding web development are primarily front-end focused, but I do have
+                        some experience working with some backend projects as well. I've spent most of my recent time
+                        utilizing various online resources
+                        for both educational and training purposes. These resources include freeCodeCamp,
+                        TheOdinProject, and some of the following Udemy
+                        course:</p>
+                    <ul class="experience--list">
+                        <li>The Complete Full-Stack Web Development BootCamp (Angela Yu)</li>
+                        <li>The Complete JavaScript Course 2025: From Zero to Expert! (Jonas Schmedtmann)</li>
+                        <li>More to come!</li>
+                    </ul>
                 </div>
                 <!--  -->
-                <article class="about_content">
-                    <div class="content active-content" id="tabSkills">
-                        <h4 class="tab-heading">My Tech Stack</h4>
-                        <ul class="skills--list">
-                            <li><img src="./images/Icons/HTML5_SVG.svg" alt="" class="skill-icon"></li>
-                            <li><img src="./images/Icons/CSS3_SVG.svg" alt="" class="skill-icon"></li>
-                            <li><img src="./images/Icons/Javascript_SVG.svg" alt="" class="skill-icon"></li>
-                            <li><img src="./images/Icons/Bootstrap_SVG.svg" alt="" class="skill-icon"></li>
-                            <li><img src="./images/Icons/nodejs_SVG.svg" alt="" class="skill-icon"></li>
-                            <li><img src="./images/Icons/ReactJS_SVG.svg" alt="" class="skill-icon"></li>
-                            <li><img src="./images/Icons/WordPress_SVG.svg" alt="" class="skill-icon"></li>
-                        </ul>
-                    </div>
-                    <!--  -->
-                    <div class="content" id="tabExperience">
-                        <h4 class="tab-heading">Experience</h4>
-                        <p>My skills and experience with web development are primarily front-end focused, but I do have
-                            some experience working with some backend projects as well. I utilized many online resources
-                            for educational and training purposes such as freeCodeCamp, TheOdinProject, and some Udemy
-                            courses below:</p>
-                        <ul class="experience--list">
-                            <li>The Complete Full-Stack Web Development Bootcamp (Angela Yu)</li>
-                            <li>The Complete JavaScript Course 2025: From Zero to Expert! (Jonas Schmedtmann)</li>
-                            <li>More to come!</li>
-                        </ul>
-                    </div>
-                    <!--  -->
-                    <div class="content" id="tabGoals">
-                        <h4 class="tab-heading">Goals</h4>
+                <div class="content" id="tabGoals">
+                    <h4 class="tab-heading">Goals</h4>
 
-                        <p>My goals are simple; I want to continue the pursuit of knowledge in the realm of web
-                            development, bolster new skills, and help many people in creating their dream websites.
-                            Whether it's for business, blogging, or just simply related to one's hobbies, I aim to
-                            please and assist.</p>
-                    </div>
-
-                </article>
+                    <p>My goals are quite simple; I want to continue the pursuit of knowledge in the realm of web
+                        development, bolster new skills, and help many people in creating their dream websites.
+                        Whether it's for business, blogging, or just simply related to one's hobbies, I aim to
+                        please and assist.</p>
+                </div>
             </article>
-
-            <!-- <div class="about_modal">
-                <p>To be Continued...</p>
-            </div> -->
-        </section>
-
-        <section id="projects">
-            <h2 class="reveal-right">My Projects</h2>
-
-            <div id="project_carousel" class="reveal-right">
-                <button type="button" class="arrow-btn prev">
-                    <span class="material-symbols-outlined">
-                        arrow_back_ios
-                    </span>
-                </button>
-                <!--  -->
-                <div class="track" id="projectsTrack" tabindex="0">
-                    <!-- Card 1 -->
-                    <article class="card">
-                        <img src="./images/Screenshots/Screenshot 2025-09-02 110759.png" alt="">
-                        <div class="project-content">
-                            <h3>Camie's Photos</h3>
-                            <p>A simple portfolio website for showcasing photography</p>
-                            <div class="skill_tags">
-                                <span class="tag">HTML</span>
-                                <span class="tag">CSS</span>
-                                <span class="tag">Wordpress</span>
-                            </div>
-                            <div class="project_links">
-                                <a href="https://camies.photos/" target="_blank" rel="noopener"
-                                    class="btn-link live">Live</a>
-                            </div>
-                        </div>
-                    </article>
-                    <!-- Card 2 -->
-                    <article class="card">
-                        <img src="./images/Screenshots/Screenshot 2025-09-02 111047.png" alt="">
-                        <div class="project-content">
-                            <h3>GotMoxie Designs</h3>
-                            <p>A portfolio website </p>
-                            <div class="skill_tags">
-                                <span class="tag">HTML</span>
-                                <span class="tag">CSS</span>
-                                <span class="tag">JavaScript</span>
-                            </div>
-                            <div class="project_links">
-                                <a href="" target="_blank" rel="noopener" class="btn-link github">GitHub</a>
-                                <a href="" target="_blank" rel="noopener" class="btn-link live">Live</a>
-                            </div>
-                        </div>
-                    </article>
-                    <!-- Card 3 -->
-                    <article class="card">
-                        <img src="./images/Screenshots/Screenshot 2025-09-02 111542.png" alt="">
-                        <div class="project-content">
-                            <h3>Forkify</h3>
-                            <p>A real description of the app or website</p>
-                            <div class="skill_tags">
-                                <span class="tag">HTML</span>
-                                <span class="tag">CSS</span>
-                                <span class="tag">JavaScript</span>
-                                <span class="tag">Node.js</span>
-                                <span class="tag">API</span>
-                            </div>
-                            <div class="project_links">
-                                <a href="" target="_blank" rel="noopener" class="btn-link github">GitHub</a>
-                                <a href="" target="_blank" rel="noopener" class="btn-link live">Live</a>
-                            </div>
-                        </div>
-                    </article>
-                    <!-- Card 4 -->
-                    <article class="card">
-                        <img src="./images/Screenshots/Screenshot 2025-09-02 111825.png" alt="">
-                        <div class="project-content">
-                            <h3>Timer App</h3>
-                            <p>A real description of the app or website</p>
-                            <div class="skill_tags">
-                                <span class="tag">HTML</span>
-                                <span class="tag">CSS</span>
-                                <span class="tag">JavaScript</span>
-                                <span class="tag">API</span>
-                            </div>
-                            <div class="project_links">
-                                <a href="" target="_blank" rel="noopener" class="btn-link github">GitHub</a>
-                                <a href="" target="_blank" rel="noopener" class="btn-link live">Live</a>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-
-                <button type="button" class="arrow-btn next">
-                    <span class="material-symbols-outlined">
-                        arrow_forward_ios
-                    </span>
-                </button>
-            </div>
-        </section>
-
-        <section id="contact">
-            <h2 class="reveal-left">Contact Me</h2>
-
-            <p class="reveal-left">Friends, business owners, and potential collaborators, please reach out to me and let's see if I can help
-                your websites come to life.</p>
-
-            <div class="form__container reveal">
-                <form action="" class="contact_form">
-                    <input type="text" name="" id="name" placeholder="Full Name"> <br>
-                    <input type="email" name="" id="email" placeholder="Email"> <br>
-                    <input type="text" name="" id="subject" placeholder="Subject"> <br>
-                    <textarea name="" id="message" placeholder="Enter your message..." cols="30" rows="10"></textarea>
-                    <div class="g-recaptcha" data-sitekey=""></div><br>
-                    <input type="submit" value="Send Message" class="submit">
-                </form>
-            </div>
-        </section>
-
-        <footer>
-            <p>
-                2025 @ D'Marcus allison.
-            </p>
-            <p>Website designed and built by me. All rights reserved</p>
-        </footer>
-
-        <article class="light_dark--toggle">
-            <img src="./images/Icons/moon-solid.svg" alt="moon icon: click for night mode" class="light-dark moon ">
-            <img src="./images/Icons/sun-solid.svg" alt="sun icon: click for light mode" class="light-dark sun inactive">
         </article>
-    </body>
+    </section>
+
+    <section id="projects">
+        <h2 class="reveal-right">My Projects</h2>
+
+        <div id="project_carousel" class="reveal-right">
+            <button type="button" class="arrow-btn prev">
+                <span class="material-symbols-outlined">
+                    arrow_back_ios
+                </span>
+            </button>
+            <!--  -->
+            <div class="track" id="projectsTrack" tabindex="0">
+                <!-- Card 1 -->
+                <article class="card">
+                    <img src="./images/Screenshots/Screenshot 2025-09-02 110759.png" alt="">
+                    <div class="project-content">
+                        <h3>Camie's Photos</h3>
+                        <p>A simple photography portfolio for Camie Jones's freelance business</p>
+                        <div class="skill_tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">Wordpress</span>
+                        </div>
+                        <div class="project_links">
+                            <a href="https://camies.photos/" target="_blank" rel="noopener"
+                                class="btn-link live">Live</a>
+                        </div>
+                    </div>
+                </article>
+                <!-- Card 2 -->
+                <article class="card">
+                    <img src="./images/Screenshots/Screenshot 2025-09-02 111047.png" alt="">
+                    <div class="project-content">
+                        <h3>GotMoxie Designs</h3>
+                        <p>A website made for GotMoxieDesigns LLC, a freelance business</p>
+                        <div class="skill_tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                        <div class="project_links">
+                            <a href="" target="_blank" rel="noopener" class="btn-link github">GitHub</a>
+                            <a href="" target="_blank" rel="noopener" class="btn-link live">Live</a>
+                        </div>
+                    </div>
+                </article>
+                <!-- Card 3 -->
+                <article class="card">
+                    <img src="./images/Screenshots/Screenshot 2025-09-02 111542.png" alt="">
+                    <div class="project-content">
+                        <h3>Forkify</h3>
+                        <p>Utilizes an API for over 1 million recipe search options</p>
+                        <div class="skill_tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">API</span>
+                        </div>
+                        <div class="project_links">
+                            <a href="" target="_blank" rel="noopener" class="btn-link github">GitHub</a>
+                            <a href="" target="_blank" rel="noopener" class="btn-link live">Live</a>
+                        </div>
+                    </div>
+                </article>
+                <!-- Card 4 -->
+                <article class="card">
+                    <img src="./images/Screenshots/Screenshot 2025-09-05 090302.png" alt="">
+                    <div class="project-content">
+                        <h3>Dictionary App</h3>
+                        <p>A small dictionary project, used to showcase JavaScript and API knowledge
+                        </p>
+                        <div class="skill_tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">API</span>
+                        </div>
+                        <div class="project_links">
+                            <a href="" target="_blank" rel="noopener" class="btn-link github">GitHub</a>
+                            <a href="" target="_blank" rel="noopener" class="btn-link live">Live</a>
+                        </div>
+                    </div>
+                </article>
+                <!-- Card 5 -->
+                <article class="card">
+                    <img src="./images/placeholder.png" alt="">
+                    <div class="project-content">
+                        <h3>Coming Soon!</h3>
+                        <p>Currently a work in progress...</p>
+                        <div class="skill_tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                        <div class="project_links">
+                            <a href="" target="_blank" rel="noopener" class="btn-link github">GitHub</a>
+                            <a href="" target="_blank" rel="noopener" class="btn-link live">Live</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <button type="button" class="arrow-btn next">
+                <span class="material-symbols-outlined">
+                    arrow_forward_ios
+                </span>
+            </button>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="reveal-left">Contact Me</h2>
+
+        <p class="reveal-left">Friends, business owners, and potential collaborators, please reach out to me and let's
+            see if I can help
+            your websites come to life.</p>
+
+        <div class="form__container reveal">
+            <form action="" class="contact_form">
+                <input type="text" name="" id="name" placeholder="Full Name"> <br>
+                <input type="email" name="" id="email" placeholder="Email"> <br>
+                <input type="text" name="" id="subject" placeholder="Subject"> <br>
+                <textarea name="" id="message" placeholder="Enter your message..." cols="30" rows="10"></textarea>
+                <div class="g-recaptcha" data-sitekey=""></div><br>
+                <button type="button" value="Send Message" class="submit" onclick="sendEmail()">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+            <p>Copyright  @  2024 - <span class="current-year"></span> - D'Marcus Allison.</p>
+        <p>Website designed and built by me. All rights reserved.</p>
+    </footer>
+
+    <article class="light_dark--toggle">
+        <img src="./images/icons/moon-solid.svg" alt="moon icon: click for night mode" class="light-dark moon ">
+        <img src="./images/icons/sun-solid.svg" alt="sun icon: click for light mode" class="light-dark sun inactive">
+    </article>
+</body>
 
 </html>
-            <!--
-                <section id="contact">
-            <h2>Let's Talk Business</h2>
-            <form action="/contact" method="POST" class="contact-form">
-                --Name Field
-                <label for="name">Full Name</label>
-                <input type="text" id="name" name="name" placeholder="Your name" required>
-    
-                --Email Field
-                <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" placeholder="your@email.com" required>
-    
-                --Subject Field
-                <label for="subject">Subject</label>
-                <input type="text" id="subject" name="subject" placeholder="What's this about?" required>
-    
-                --Message Field
-                <label for="message">Your Message</label>
-                <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
-    
-                --Submit Button
-                <button type="submit">Send Message</button>
-            </form>
-        </section>
-    -->

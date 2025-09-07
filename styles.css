@@ -104,7 +104,7 @@ button:hover {
   right: 10px;
 
   cursor: pointer;
-  z-index: 10;
+  z-index: 7;
   opacity: 0.5;
 }
 
@@ -147,7 +147,7 @@ footer {
 
 /* Dark Mode Extras */
 body.dark-mode .about_content {
-    background-color: #585555;
+  background-color: #585555;
 }
 
 body.dark-mode .tab-btn {
@@ -166,11 +166,11 @@ body.dark-mode .card {
 }
 
 body.dark-mode .card p {
-    color: white;
+  color: white;
 }
 
 body.dark-mode .form__container {
-    background-color: rgb(39, 39, 39);
+  background-color: rgb(39, 39, 39);
 }
 
 body.dark-mode .form__container #name,
@@ -183,6 +183,16 @@ body.dark-mode .form__container #message {
 body.dark-mode .submit {
   background-color: #1b2631;
   color: white;
+}
+
+@media screen and (max-width: 650px) {
+  body.dark-mode .nav_list--container {
+    background-color: var(--clr-secondary-2);
+  }
+  
+    body.dark-mode .nav_list--container .nav_list--items li,body.dark-mode .nav_list--container .nav_list--items li a{
+      color: var(--clr-white)
+    }
 }
 
 @media screen and (min-width: 749px) {
@@ -914,7 +924,8 @@ CONTACT SECTION
   margin: 10px;
   border: 1px solid gray;
   border-radius: 10px;
-  max-width: 90%;
+  width: 80%;
+  max-width: 95%;
   height: 80px;
   padding: 0.2rem;
 
@@ -924,15 +935,16 @@ CONTACT SECTION
 }
 
 @media (max-width: 520px) {
+
   #contact h2,
   #contact p {
     text-align: center;
     margin-left: 0;
   }
 
-    #contact p{
-      padding: 20px;
-    }
+  #contact p {
+    padding: 20px;
+  }
 }
 
 /* =============== 
@@ -947,4 +959,5 @@ footer {
   gap: 15px;
   justify-content: center;
   align-items: center;
+  margin-top: 80px;
 }

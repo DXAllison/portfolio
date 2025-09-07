@@ -27,7 +27,8 @@ const revealsRight = document.querySelectorAll('.reveal-right');
 // Form //
 const formContainer = document.querySelector('.form__container');
 
-
+// Year //
+const yearEl = document.querySelector('.current-year');
 
 ///// Navbar Mobile Menu Toggle /////
 navListToggle.addEventListener('click', () => {
@@ -134,3 +135,22 @@ const observer = new IntersectionObserver((entries) => {
 reveals.forEach(reveal => observer.observe(reveal));
 revealsLeft.forEach(reveal => observer.observe(reveal));
 revealsRight.forEach(reveal => observer.observe(reveal));
+
+///// emailJS /////
+function sendEmail() {
+  const templateParams = {
+    name: document.querySelector('#name').value,
+    email: document.querySelector('#email').value,
+    subject: document.querySelector('#subject').value,
+    message: document.querySelector('#message').value,
+  };
+
+  emailjs
+    .send('service_jhg4th6', 'template_ws34e78', templateParams,).then(
+      () => alert('Email sent!').catch(() => alert('Email not sent...')));
+}
+
+
+///// Element Reveal on Scroll /////
+const currentYear = new Date();
+yearEl.textContent = currentYear.getFullYear();
