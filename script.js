@@ -146,7 +146,7 @@ function sendEmail() {
   };
 
   emailjs
-    .send('service_jhg4th6', 'template_ws34e78', templateParams,).then(
+    .send(`service_jhg4th6`, 'template_aqo74hy', templateParams,).then(
       () => alert('Email sent!').catch(() => alert('Email not sent...')));
 }
 
