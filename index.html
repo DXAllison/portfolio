@@ -6,32 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>D'Marcus Allison's Portfolio</title>
 
-    <!-- EmailJS -->
-     <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-</script>
-<script type="text/javascript">
-   (function(){
-      emailjs.init({
-        publicKey: "JLMQDlVqST896QB6b",
-      });
-   })();
-</script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
 
-    <!-- Google Fonts (Symbols) -->
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "JLMQDlVqST896QB6b",
+            });
+        })();
+    </script>
+
+    <!-- Google Font Symbols -->
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_back_ios,arrow_forward_ios" />
 
-        <!-- CSS & JS -->
+    <!-- CSS & JS -->
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
 </head>
 
 <body>
-    <nav id="navbar">
-        <div class="nav__container" aria-label="Main navigation">
+    <nav id="navbar" aria-label="Main navigation">
+        <div class="nav__container">
             <a href="#" class="nav-logo" aria-label="Logo element">DXA</a>
-            <div class="nav_menu-toggle" aria-label="Hamburger Menu elements">
+            <div class="nav_menu-toggle" aria-label="Hamburger menu button">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -50,18 +52,20 @@
 
     <section id="hero" class="reveal-left">
         <div class="intro__img-container">
-            <img src="./images/photograph.jpg" alt="A photo of D'Marcus, the site creator and owner"
-                class="profile-img">
+            <img src="./images/photograph.jpg" alt="A photo of D'Marcus, the site creator and owner" class="profile-img"
+                loading="lazy">
         </div>
 
-        <div class="intro__container">
+        <div class="intro__container" aria-label="Main introduction section">
             <h1 class="intro-heading">D'Marcus Allison</h1>
             <hr>
             <p>An Aspiring <span class="intro-span">Web Developer</span></p>
 
             <div class="portfolio_btns">
-                <button type="button" class="hero-btn">Download CV</button>
-                <button type="button" class="hero-btn">Contact Me</button>
+                <!-- TODO: Add resumelink to href below and correct the CSS-->
+                <a href="./resume/D'Marcus_Allison_ Full_Resume.pdf" class="hero-btn download-btn" download>Download
+                    CV</a>
+                <a href="#contact" class="hero-btn contact-btn">Contact Me</a>
             </div>
         </div>
     </section>
@@ -70,54 +74,58 @@
         <h2 class="reveal-left">About Me</h2>
         <div class="about__container">
             <div class="about_info reveal-left">
-                <p>Hello, I'm D'Marcus, an up-and-coming junior web developer. I consider myself a dedicated and
-                    results-driven professional who's eagerly seeking out new coding techniques to elevate my craft.
-                    Feel free to take a quick look at my skills and experience below.
-                    <!-- If you want to know a bit more about the personal stuff, you can check that out <a href="" class="about-link">here</a>! -->
+                <p>Hello, I'm D'Marcus, an up-and-coming junior web developer. After spending several years in the
+                    business & finance fields, I gained a love and appreciation for the many wonders of the tech
+                    industry on the side; primarily in web development and simple programming.
+                    As a dedicated and
+                    results-driven professional, I'm always eagerly seeking new techniques for web development to
+                    elevate my craft, and I look forward to using my knowledge to bring ideas, both new and old, to
+                    life. I look forward to working with others, and if you're interested, feel free to take a quick
+                    look at my skills and experience below.
                 </p>
-
-                <!-- <div class="about_modal">
-                <p>To be Continued...(WIP)</p>
-            </div> -->
             </div>
 
             <div class="about_img reveal-right"><img src="./images/photograph2.png"
-                    alt="Another photo of D'Marcus, the site creator and owner" class="secondary-img">
+                    alt="Another photo of D'Marcus, the site creator and owner" class="secondary-img" loading="lazy">
             </div>
         </div>
 
-        <article id="about__tabs" class="reveal">
+        <article id="about__tabs" class="reveal" aria-label="Tabs section about skills, experience, and goals">
             <div class="tabs_container">
                 <button class="tab-btn active-btn" type="button" data-id="tabSkills">Skills</button>
                 <button class="tab-btn" type="button" data-id="tabExperience">Experience</button>
                 <button class="tab-btn" type="button" data-id="tabGoals">Goals</button>
             </div>
             <!--  -->
-            <article class="about_content">
+            <article class="about_content" aria-label="Content section for the about tabs">
                 <div class="content active-content" id="tabSkills">
                     <h4 class="tab-heading">My Tech Stack</h4>
                     <ul class="skills--list">
-                        <li><img src="./images/icons/HTML5_SVG.svg" alt="" class="skill-icon"></li>
-                        <li><img src="./images/icons/CSS3_SVG.svg" alt="" class="skill-icon"></li>
-                        <li><img src="./images/icons/Javascript_SVG.svg" alt="" class="skill-icon"></li>
-                        <li><img src="./images/icons/Bootstrap_SVG.svg" alt="" class="skill-icon"></li>
-                        <li><img src="./images/icons/nodejs_SVG.svg" alt="" class="skill-icon"></li>
-                        <li><img src="./images/icons/ReactJS_SVG.svg" alt="" class="skill-icon"></li>
-                        <li><img src="./images/icons/WordPress_SVG.svg" alt="" class="skill-icon"></li>
+                        <li><img src="./images/icons/HTML5_SVG.svg" alt="HTML 5 icon" class="skill-icon"></li>
+                        <li><img src="./images/icons/CSS3_SVG.svg" alt="CSS 3 icon" class="skill-icon"></li>
+                        <li><img src="./images/icons/Javascript_SVG.svg" alt="JavaScript icon" class="skill-icon"></li>
+                        <li><img src="./images/icons/Bootstrap_SVG.svg" alt="Bootstrap icon" class="skill-icon"></li>
+                        <li><img src="./images/icons/nodejs_SVG.svg" alt="nodeJS icon" class="skill-icon"></li>
+                        <li><img src="./images/icons/ReactJS_SVG.svg" alt="React icon" class="skill-icon"></li>
+                        <li><img src="./images/icons/WordPress_SVG.svg" alt="WordPress icon" class="skill-icon"></li>
                     </ul>
                 </div>
                 <!--  -->
                 <div class="content" id="tabExperience">
                     <h4 class="tab-heading">Experience</h4>
-                    <p>My skills regarding web development are primarily front-end focused, but I do have
-                        some experience working with some backend projects as well. I've spent most of my recent time
-                        utilizing various online resources
-                        for both educational and training purposes. These resources include freeCodeCamp,
-                        TheOdinProject, and some of the following Udemy
-                        course:</p>
+                    <p>My skills in web development were achieved through a mix of self-taught learning, and utilizing
+                        several online resources and training tools.
+                        I've been learning and practicing for about a year and half now, and while my skills are
+                        primarily front-end focused, I do have some slight experience working with some backend projects
+                        as well. My main focus has been on HTML, CSS, and JavaScript, but I've also dabbled in
+                        Bootstrap, React, Node.js, and WordPress. My online training resources includes sites such as
+                        freeCodeCamp and TheOdinProject, as well as receiving certifications from some of the following
+                        Udemy courses:</p>
+
                     <ul class="experience--list">
                         <li>The Complete Full-Stack Web Development BootCamp (Angela Yu)</li>
                         <li>The Complete JavaScript Course 2025: From Zero to Expert! (Jonas Schmedtmann)</li>
+                        <li>The Ultimate React Course 2025: React, Next.js, Redux & More (Jonas Schmedtmann)</li>
                         <li>More to come!</li>
                     </ul>
                 </div>
@@ -125,10 +133,12 @@
                 <div class="content" id="tabGoals">
                     <h4 class="tab-heading">Goals</h4>
 
-                    <p>My goals are quite simple; I want to continue the pursuit of knowledge in the realm of web
-                        development, bolster new skills, and help many people in creating their dream websites.
-                        Whether it's for business, blogging, or just simply related to one's hobbies, I aim to
-                        please and assist.</p>
+                    <p>My aim is to continue in the pursuit of knowledge in the realm of web development, bolster new
+                        skills, and help many
+                        people in creating their dream websites. As technology continues to evolve, I look forward to
+                        adapting and growing with
+                        it as well. Whether it's for business, blogging, or just simply related to one's hobbies, I
+                        aim to please and assist any and all future collaborators and commissioners.</p>
                 </div>
             </article>
         </article>
@@ -138,7 +148,7 @@
         <h2 class="reveal-right">My Projects</h2>
 
         <div id="project_carousel" class="reveal-right">
-            <button type="button" class="arrow-btn prev">
+            <button type="button" class="arrow-btn prev" aria-label="Scroll projects left">
                 <span class="material-symbols-outlined">
                     arrow_back_ios
                 </span>
@@ -174,7 +184,7 @@
                             <span class="tag">JavaScript</span>
                         </div>
                         <div class="project_links">
-                            <a href="" target="_blank" rel="noopener" class="btn-link github">GitHub</a>
+                            <a href="https://github.com/DXAllison/GotMoxieDesigns" target="_blank" rel="noopener" class="btn-link github">GitHub</a>
                             <a href="" target="_blank" rel="noopener" class="btn-link live">Live</a>
                         </div>
                     </div>
@@ -236,7 +246,7 @@
                 </article>
             </div>
 
-            <button type="button" class="arrow-btn next">
+            <button type="button" class="arrow-btn next" aria-label="Scroll projects right">
                 <span class="material-symbols-outlined">
                     arrow_forward_ios
                 </span>
@@ -258,17 +268,56 @@
                 <input type="text" name="" id="subject" placeholder="Subject"> <br>
                 <textarea name="" id="message" placeholder="Enter your message..." cols="30" rows="10"></textarea>
                 <div class="g-recaptcha" data-sitekey=""></div><br>
-                <input type="button" value="Send Message" class="submit" onclick="sendEmail()">
+                <input type="button" value="Send Message" class="submit" onclick="sendEmail()"
+                    aria-label="Button to send email">
             </form>
         </div>
     </section>
 
     <footer>
-            <p>Copyright  @  2024 - <span class="current-year"></span> - D'Marcus Allison.</p>
+        <div class="social-links">
+            <a href="http://www.google.com" target="_blank" rel="noopener">
+                <svg class="socials" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 56.7 56.7"
+                    enable-background="new 0 0 56.7 56.7" xml:space="preserve">
+                    <g>
+                        <path
+                            d="M28.2,16.7c-7,0-12.8,5.7-12.8,12.8s5.7,12.8,12.8,12.8S41,36.5,41,29.5S35.2,16.7,28.2,16.7z M28.2,37.7   c-4.5,0-8.2-3.7-8.2-8.2s3.7-8.2,8.2-8.2s8.2,3.7,8.2,8.2S32.7,37.7,28.2,37.7z" />
+                        <circle cx="41.5" cy="16.4" r="2.9" />
+                        <path
+                            d="M49,8.9c-2.6-2.7-6.3-4.1-10.5-4.1H17.9c-8.7,0-14.5,5.8-14.5,14.5v20.5c0,4.3,1.4,8,4.2,10.7c2.7,2.6,6.3,3.9,10.4,3.9   h20.4c4.3,0,7.9-1.4,10.5-3.9c2.7-2.6,4.1-6.3,4.1-10.6V19.3C53,15.1,51.6,11.5,49,8.9z M48.6,39.9c0,3.1-1.1,5.6-2.9,7.3   s-4.3,2.6-7.3,2.6H18c-3,0-5.5-0.9-7.3-2.6C8.9,45.4,8,42.9,8,39.8V19.3c0-3,0.9-5.5,2.7-7.3c1.7-1.7,4.3-2.6,7.3-2.6h20.6   c3,0,5.5,0.9,7.3,2.7c1.7,1.8,2.7,4.3,2.7,7.2V39.9L48.6,39.9z" />
+                    </g>
+                </svg>
+            </a>
+
+            <a href="http://www.google.com" target="_blank" rel="noopener"> <svg class="socials" height="100%"
+                    style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;" version="1.1"
+                    viewBox="0 0 512 512" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:serif="http://www.serif.com/" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <path
+                        d="M256,0c141.29,0 256,114.71 256,256c0,141.29 -114.71,256 -256,256c-141.29,0 -256,-114.71 -256,-256c0,-141.29 114.71,-256 256,-256Zm-80.037,399.871l0,-199.921l-66.464,0l0,199.921l66.464,0Zm239.62,0l0,-114.646c0,-61.409 -32.787,-89.976 -76.509,-89.976c-35.255,0 -51.047,19.389 -59.889,33.007l0,-28.306l-66.447,0c0.881,18.757 0,199.921 0,199.921l66.446,0l0,-111.65c0,-5.976 0.43,-11.95 2.191,-16.221c4.795,-11.935 15.737,-24.299 34.095,-24.299c24.034,0 33.663,18.34 33.663,45.204l0,106.966l66.45,0Zm-272.403,-296.321c-22.74,0 -37.597,14.95 -37.597,34.545c0,19.182 14.405,34.544 36.717,34.544l0.429,0c23.175,0 37.6,-15.362 37.6,-34.544c-0.43,-19.595 -14.424,-34.545 -37.149,-34.545Z" />
+                </svg>
+            </a>
+
+            <a href="http://www.google.com" target="_blank" rel="noopener"> <svg class="socials"
+                    enable-background="new -1163 1657.697 56.693 56.693" height="56.693px" id="Layer_1" version="1.1"
+                    viewBox="-1163 1657.697 56.693 56.693" width="56.693px" xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g>
+                        <path clip-rule="evenodd"
+                            d="M-1134.6598,1662.9163c-13.601,0-24.63,11.0267-24.63,24.6299   c0,10.8821,7.0573,20.1144,16.8435,23.3713c1.2308,0.2279,1.6829-0.5345,1.6829-1.1849c0-0.587-0.0227-2.5276-0.0334-4.5857   c-6.8521,1.4901-8.2979-2.906-8.2979-2.906c-1.1205-2.8467-2.7347-3.6039-2.7347-3.6039   c-2.2349-1.5287,0.1685-1.4972,0.1685-1.4972c2.473,0.1737,3.7755,2.5385,3.7755,2.5385c2.1967,3.7651,5.7618,2.6765,7.1675,2.0472   c0.2211-1.5917,0.8591-2.6786,1.5637-3.2936c-5.4707-0.6226-11.2218-2.7347-11.2218-12.1722c0-2.6888,0.9623-4.8861,2.538-6.611   c-0.2557-0.6206-1.0989-3.1255,0.2386-6.5183c0,0,2.0684-0.6616,6.7747,2.525c1.9648-0.5458,4.0719-0.8195,6.165-0.829   c2.093,0.0095,4.2017,0.2832,6.17,0.829c4.7012-3.1866,6.7665-2.525,6.7665-2.525c1.3406,3.3928,0.4974,5.8977,0.2417,6.5183   c1.5793,1.7249,2.5348,3.9221,2.5348,6.611c0,9.4602-5.7618,11.5428-11.2465,12.1527c0.8834,0.7644,1.6704,2.2632,1.6704,4.561   c0,3.2955-0.0282,5.9479-0.0282,6.7592c0,0.6556,0.4432,1.4236,1.6915,1.1818c9.7812-3.2605,16.8296-12.4896,16.8296-23.3682   C-1110.0299,1673.943-1121.0574,1662.9163-1134.6598,1662.9163z"
+                            fill-rule="evenodd" />
+                    </g>
+                </svg>
+            </a>
+        </div>
+
+
+        <p>Copyright @ 2024 - <span class="current-year"></span>. D'Marcus Allison.</p>
         <p>Website designed and built by me. All rights reserved.</p>
     </footer>
 
-    <article class="light_dark--toggle">
+    <article class="light_dark--toggle" aria-label="Toggle between light mode and dark mode">
         <img src="./images/icons/moon-solid.svg" alt="moon icon: click for night mode" class="light-dark moon ">
         <img src="./images/icons/sun-solid.svg" alt="sun icon: click for light mode" class="light-dark sun inactive">
     </article>

@@ -189,10 +189,11 @@ body.dark-mode .submit {
   body.dark-mode .nav_list--container {
     background-color: var(--clr-secondary-2);
   }
-  
-    body.dark-mode .nav_list--container .nav_list--items li,body.dark-mode .nav_list--container .nav_list--items li a{
-      color: var(--clr-white)
-    }
+
+  body.dark-mode .nav_list--container .nav_list--items li,
+  body.dark-mode .nav_list--container .nav_list--items li a {
+    color: var(--clr-white)
+  }
 }
 
 @media screen and (min-width: 749px) {
@@ -304,15 +305,34 @@ Navbar
 
   .nav_menu-toggle.toggle-active .bar:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
+    background-color: var(--clr-black);
   }
 
   .nav_menu-toggle.toggle-active .bar:nth-child(2) {
     opacity: 0;
+    background-color: var(--clr-black);
+
   }
 
   .nav_menu-toggle.toggle-active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
+    background-color: var(--clr-black);
   }
+
+
+
+  body.dark-mode #navbar .nav__container .nav_menu-toggle.toggle-active .bar:nth-child(1) {
+    background-color: var(--clr-white);
+  }
+
+  body.dark-mode #navbar .nav__container .nav_menu-toggle.toggle-active .bar:nth-child(2) {
+    background-color: var(--clr-white);
+  }
+
+  body.dark-mode #navbar .nav__container .nav_menu-toggle.toggle-active .bar:nth-child(3) {
+    background-color: var(--clr-white);
+  }
+
 
   .nav_list--container {
     display: block;
@@ -424,11 +444,16 @@ Hero
 }
 
 .hero-btn {
+  display: inline-block;
   background-color: var(--clr-primary-3);
+  border: 2px solid var(--clr-primary-2);
   border-radius: 8px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, .35);
+  color: var(--clr-secondary-1);
   font-size: 1.1rem;
-  margin: 10px 8px 0;
+  margin: 20px 8px 0;
   padding: min(0.7em, 1.2em) min(1.3em, 1.4em);
+  text-decoration: none;
 }
 
 .hero-btn:hover {
@@ -565,9 +590,13 @@ ABOUT SECTION
   box-shadow: 0 4px 3px rgba(0, 0, 0, .35);
 }
 
-.skills--list,
-.experience--list {
+.skills--list {
   list-style-type: none;
+}
+
+.experience--list {
+  list-style-type: circle;
+  margin-top: 30px;
 }
 
 #tabExperience,
@@ -953,11 +982,28 @@ FOOTER SECTION
 footer {
   background-color: var(--clr-secondary-1);
   text-align: center;
-  height: 90px;
+  height: 165px;
   display: flex;
   flex-direction: column;
   gap: 15px;
   justify-content: center;
   align-items: center;
   margin-top: 80px;
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.socials {
+  width: 40px;
+  fill: var(--clr-white);
+  color: white;
+}
+
+.socials:hover {
+  width: 45px;
+  transition: 0.5ms ease-in;
 }
