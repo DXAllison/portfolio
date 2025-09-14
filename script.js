@@ -2,6 +2,7 @@
 // Nav Mobile
 const navListItems = document.querySelector('.nav_list--container');
 const navListToggle = document.querySelector('.nav_menu-toggle');
+const navLinks = document.querySelectorAll('.nav-link');
 
 // Light / Dark //
 const lightDarkToggle = document.querySelector('.light_dark--toggle');
@@ -35,6 +36,15 @@ navListToggle.addEventListener('click', () => {
   navListToggle.classList.toggle('toggle-active');
   navListItems.classList.toggle('toggle-active');
   body.classList.toggle('non-scroll');
+})
+
+///// Close mobile menu on link click ////
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    navListToggle.classList.remove('toggle-active');
+    navListItems.classList.remove('toggle-active');
+    body.classList.remove('non-scroll');
+  })
 })
 
 ///// Dark Mode Toggle /////

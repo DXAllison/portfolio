@@ -244,7 +244,7 @@ Navbar
   right: 0;
   top: 0;
 
-  padding: min(0.6em, 0.9em);
+  padding: min(0.8em, 1em);
   z-index: 8;
 }
 
@@ -319,7 +319,9 @@ Navbar
     background-color: var(--clr-black);
   }
 
-
+.nav_list--items li a:hover {
+  text-decoration: none;
+}
 
   body.dark-mode #navbar .nav__container .nav_menu-toggle.toggle-active .bar:nth-child(1) {
     background-color: var(--clr-white);

@@ -7,7 +7,7 @@
     <title>D'Marcus Allison's Portfolio</title>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="icon" type="image/ico" href="./images/favicon.ico">
 
     <!-- EmailJS -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
@@ -41,10 +41,10 @@
             <div class="nav_list--container">
                 <ul class="nav_list--items">
                     <li class="title-menu">MENU</li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#about__tabs">Experience</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#about__tabs" class="nav-link">Experience</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
             </div>
         </div>
@@ -62,8 +62,7 @@
             <p>An Aspiring <span class="intro-span">Web Developer</span></p>
 
             <div class="portfolio_btns">
-                <!-- TODO: Add resumelink to href below and correct the CSS-->
-                <a href="./resume/D'Marcus_Allison_ Full_Resume.pdf" class="hero-btn download-btn" download>Download
+                <a href="./resume/D'Marcus_WebDev_Resume.pdf" class="hero-btn download-btn" download>Download
                     CV</a>
                 <a href="#contact" class="hero-btn contact-btn">Contact Me</a>
             </div>
@@ -185,7 +184,7 @@
                         </div>
                         <div class="project_links">
                             <a href="https://github.com/DXAllison/GotMoxieDesigns" target="_blank" rel="noopener" class="btn-link github">GitHub</a>
-                            <a href="" target="_blank" rel="noopener" class="btn-link live">Live</a>
+                            <a href="https://dxallison.github.io/GotMoxieDesigns/index.html" target="_blank" rel="noopener" class="btn-link live">Live</a>
                         </div>
                     </div>
                 </article>
@@ -204,7 +203,7 @@
                         </div>
                         <div class="project_links">
                             <a href="" target="_blank" rel="noopener" class="btn-link github">GitHub</a>
-                            <a href="" target="_blank" rel="noopener" class="btn-link live">Live</a>
+                            <a href="https://forkify-dmarcus.netlify.app/" target="_blank" rel="noopener" class="btn-link live">Live</a>
                         </div>
                     </div>
                 </article>
@@ -222,8 +221,8 @@
                             <span class="tag">API</span>
                         </div>
                         <div class="project_links">
-                            <a href="" target="_blank" rel="noopener" class="btn-link github">GitHub</a>
-                            <a href="" target="_blank" rel="noopener" class="btn-link live">Live</a>
+                            <a href="https://github.com/DXAllison/English-Dictionary-App" target="_blank" rel="noopener" class="btn-link github">GitHub</a>
+                            <a href="https://dxallison.github.io/English-Dictionary-App/" target="_blank" rel="noopener" class="btn-link live">Live</a>
                         </div>
                     </div>
                 </article>
@@ -239,8 +238,8 @@
                             <span class="tag">JavaScript</span>
                         </div>
                         <div class="project_links">
-                            <a href="" target="_blank" rel="noopener" class="btn-link github">GitHub</a>
-                            <a href="" target="_blank" rel="noopener" class="btn-link live">Live</a>
+                            <a class="btn-link github">GitHub</a>
+                            <a class="btn-link live">Live</a>
                         </div>
                     </div>
                 </article>
@@ -263,9 +262,9 @@
 
         <div class="form__container reveal">
             <form action="" class="contact_form">
-                <input type="text" name="" id="name" placeholder="Full Name"> <br>
-                <input type="email" name="" id="email" placeholder="Email"> <br>
-                <input type="text" name="" id="subject" placeholder="Subject"> <br>
+                <input type="text" name="" id="name" placeholder="Full Name" required> <br>
+                <input type="email" name="" id="email" placeholder="Email" required> <br>
+                <input type="text" name="" id="subject" placeholder="Subject" required> <br>
                 <textarea name="" id="message" placeholder="Enter your message..." cols="30" rows="10"></textarea>
                 <div class="g-recaptcha" data-sitekey=""></div><br>
                 <input type="button" value="Send Message" class="submit" onclick="sendEmail()"
