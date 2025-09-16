@@ -137,7 +137,6 @@ const observer = new IntersectionObserver((entries) => {
       entry.target.classList.add('active');
       // Optional: unobserve so it only animates once
       observer.unobserve(entry.target);
-      console.log('intersected');
     }
   });
 }, { threshold: 0.8 });
@@ -147,18 +146,33 @@ revealsLeft.forEach(reveal => observer.observe(reveal));
 revealsRight.forEach(reveal => observer.observe(reveal));
 
 ///// emailJS /////
-function sendEmail() {
+document.querySelector("#contact_form").addEventListener("submit", function (event) {
+  event.preventDefault(); // 🚫 Prevent page refresh/scroll
+
   const templateParams = {
-    name: document.querySelector('#name').value,
-    email: document.querySelector('#email').value,
-    subject: document.querySelector('#subject').value,
-    message: document.querySelector('#message').value,
+    name: document.querySelector("#name").value.trim(),
+    email: document.querySelector("#email").value.trim(),
+    subject: document.querySelector("#subject").value.trim(),
+    message: document.querySelector("#message").value.trim(),
   };
 
-  emailjs
-    .send(`service_jhg4th6`, 'template_aqo74hy', templateParams,).then(
-      () => alert('Email sent!').catch(() => alert('Email not sent...')));
-}
+  // ✅ Check if all fields are filled
+  if (!templateParams.name || !templateParams.email || !templateParams.subject || !templateParams.message) {
+    alert("Please fill in all fields.");
+    return;
+  }
+
+  // ✅ Send email
+  emailjs.send("service_jhg4th6", "template_aqo74hy", templateParams)
+    .then(() => {
+      alert("Email sent!");
+      // ✅ Clear form fields after success
+      document.querySelector("#contact_form").reset();
+    })
+    .catch(() => {
+      alert("Email not sent. Please try again later.");
+    });
+});
 
 
 ///// Element Reveal on Scroll /////
